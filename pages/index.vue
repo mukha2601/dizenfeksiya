@@ -1,22 +1,54 @@
 <template>
-    <section class="home">
-    <div class="container flex">
-        <div class="home-left flex-1 flex flex-col justify-between">
-            <div class="flex flex-col gap-4">
-                <h1 class="md:text-[60px]">Dizenfeksiya xizmati</h1>
-                <p>Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday qutilishni bilamiz</p>
-            </div>
-                <Button class="flex w-max gap-3 items-center">
-                    Bog'lanish 
-                    <Icon name="material-symbols:arrow-outward" color="black" class="text-2xl" />
-                </Button>
+  <section class="home">
+    <div class="container grid md:grid-cols-2">
+      <div class="home-left flex-1 flex flex-col justify-between">
+        <div class="md:flex flex-col gap-4 pe-4 max-md:hidden">
+          <h1 class="text-[18px] sm:text-[20px] md:text-[35px] xl:text-6xl">
+            Dizenfeksiya xizmati
+          </h1>
+          <p class="md:text-[12px]">
+            Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
+            olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
+            qutilishni bilamiz
+          </p>
         </div>
-        <div class="home-right flex flex-1 justify-end">
-            <img src="../assets/home/home right img.png" alt="home-img" width="500px" >
+
+        <Button class="flex w-max gap-3 items-center max-md:hidden">
+          Bog'lanish
+          <Icon
+            name="material-symbols:arrow-outward"
+            color="black"
+            class="text-2xl"
+          />
+        </Button>
+      </div>
+      <div
+        class="home-right flex shrink-0 justify-end max-md:mt-4 max-md:relative"
+      >
+        <div
+          class="md:hidden h-full flex flex-col gap-4 justify-center max-md:absolute max-md:top-0 p-2 sm:p-4"
+        >
+          <h1 class="text-2xl sm:text-4xl text-white">Dizenfeksiya xizmati</h1>
+          <p class="text-[12px] sm:text-xl text-white">
+            Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
+            olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
+            qutilishni bilamiz
+          </p>
+          <Button class="flex w-max gap-3 items-center border-white text-white">
+            Bog'lanish
+            <Icon
+              name="material-symbols:arrow-outward"
+              color="black"
+              class="text-2xl"
+            />
+          </Button>
         </div>
+        <img src="../assets/home/home right img.png" alt="home-img" class="" />
+      </div>
     </div>
-    </section>
-    <section class="about">
+  </section>
+
+  <!-- <section class="about">
         <div class="container flex flex-col gap-12">
             <h1 class="border-b-2">Biz haqimizda</h1>
             <div class="about-card flex gap-4 ">
@@ -49,6 +81,7 @@
             </div>
         </div>
     </section>
+
     <section class="service">
         <div class="container flex flex-col gap-6">
             <h1>Xizmatlar</h1>
@@ -92,14 +125,11 @@
             </div>
         </div>
     </section>
+
     <section class="faq">
         <div class="container">
             <div class="flex border-t-2">
                 <h1 class=" flex-1">FAQ</h1>
-                <!-- <select class="">
-                    <option value="">Kursdan nima topaman</option>
-                    <option value="">Bu bir nonti kaypiday kapy darsga qatnasha olmasangiz, darsdan so‘ng guruhingizga zoom zapisi tashlab beriladi</option>
-                </select> -->
             </div>
             <div class="w-full bg-blue-600 p-6 flex relative my-12">
                 <div class=" flex-1">
@@ -109,8 +139,8 @@
                             <input type="text" placeholder="Ism" class="border-2 w-full"/>
                             <input type="text" placeholder="+998" class="border-2 w-full"/>
                             <div class="flex gap-2">
-                                <input type="checkbox"/>
-                                <p>Maxfiylik siyosati</p>
+                                <input type="checkbox" id="myChekbox"/>
+                                <label for="myChekbox">Maxfiylik siyosati</label>
                             </div>
                         </div>
                         <button class="w-full py-2 bg-black text-white">Yozilish</button>
@@ -124,6 +154,5 @@
             </div>
 
         </div>
-    </section>
-
+    </section> -->
 </template>

@@ -2,54 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Unbounded";
 }
 
-.container{
-    max-width: 1440px;
+/* .container{
     margin: auto;
     padding: 0 4rem;
+} */
+
+section {
+  padding-top: 4rem;
 }
 
-section{
-    padding-top: 4rem;
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
 }
 
-h1{
-    font-size: 42px;
-    font-weight: 700;
-}
-h2{
-    font-size: 32px;
-    font-weight: 700;
+p {
+  font-size: 16px;
+  font-weight: 200;
 }
 
-p{
-    font-size: 16px;
-    font-weight: 200;
-}
-
-li:hover{
-    color: rgb(0, 0, 255);
+li:hover {
+  color: rgb(0, 0, 255);
 }
 
 ::-webkit-scrollbar {
-    width: 0.4rem;
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background:rgb(41, 163, 238);
-  }
+  width: 0.4rem;
+  background-color: transparent;
+}
 
-input{
-    border-radius: 0;
-    padding: .5rem 1rem;
+::-webkit-scrollbar-thumb {
+  background: rgb(41, 163, 238);
+}
+
+input {
+  border-radius: 0;
+  padding: 0.5rem 1rem;
 }
