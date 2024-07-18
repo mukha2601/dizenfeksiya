@@ -117,131 +117,120 @@
         <ServiceCard />
         <ServiceCard />
       </div>
-      <div class="p-6 w-full flex gap-24 bg-blue-400 mt-12">
-        <img src="../assets/service/service.png" alt="" />
-        <div class="flex flex-col justify-between">
-          <div>
-            <img src="../assets/service/shit.png" alt="" width="80" />
-            <h2 class="mt-6 text-white">
-              Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-              talaygina
-            </h2>
-          </div>
-          <Button class="w-max text-white border-white">Bog’lanish</Button>
-        </div>
-      </div>
 
       <div class="service-type">
         <h1>Xizmat turi</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <ServiceTypeCard />
+          <ServiceTypeCard />
+          <ServiceTypeCard />
+          <ServiceTypeCard />
+          <ServiceTypeCard />
+        </div>
+      </div>
+      <div
+        class="p-6 w-full grid md:grid-cols-2 md:gap-12 lg:gap-18 bg-blue-400 mt-12"
+      >
+        <img
+          class="max-md:hidden object-cover object-center"
+          src="../assets/service/service.png"
+          alt=""
+        />
+        <div class="flex flex-col justify-around gap-6">
+          <img class="" src="../assets/service/shit.png" alt="" width="80" />
+          <h2 class="max-lg:text-sm text-white">
+            Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
+            talaygina
+          </h2>
+          <Button class="w-max text-white border-white">Bog’lanish</Button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- <section class="faq">
-        <div class="container">
-            <div class="flex border-t-2">
-                <h1 class=" flex-1">FAQ</h1>
-            </div>
-            <div class="w-full bg-blue-600 p-6 flex relative my-12">
-                <div class=" flex-1">
-                    <div class="w-96 h-96 bg-white flex-1 p-6 flex flex-col justify-between">
-                        <h2>Malumotingizni qoldiring</h2>
-                        <div class="flex flex-col gap-6">
-                            <input type="text" placeholder="Ism" class="border-2 w-full"/>
-                            <input type="text" placeholder="+998" class="border-2 w-full"/>
-                            <div class="flex gap-2">
-                                <input type="checkbox" id="myChekbox"/>
-                                <label for="myChekbox">Maxfiylik siyosati</label>
-                            </div>
-                        </div>
-                        <button class="w-full py-2 bg-black text-white">Yozilish</button>
-                    </div>
+  <section class="faq">
+    <div class="container">
+      <div class="grid max-sm:grid-cols-1 grid-cols-3 border-t-2">
+        <h1>FAQ</h1>
 
-                </div>
-                <div class="flex-1 h-full">
-                    <h6 class="w-80 text-white mt-20">Bizga ko'p yillardan beri  kompaniyamizga ishonch bildirganlar talaygina</h6>
-                    <img src="../assets/faq/faq.png" alt="" width="450" class="absolute bottom-0 right-10">
-                </div>
-            </div>
+        <UAccordion :items="items" :ui="{ wrapper: 'flex flex-col  col-span-2' }">
+          <template #default="{ item, index, open }">
+            <UButton
+              color="black"
+              variant="ghost"
+              class="border-b text-gray-500"
+              :ui="{ rounded: 'rounded-none', padding: { sm: 'py-8' } }"
+            >
+              <h2>{{ item.label }}</h2>
+              <template #trailing>
+                <UIcon
+                  name="i-heroicons-chevron-right-20-solid"
+                  class="w-5 h-5 ms-auto transform transition-transform duration-200"
+                  :class="[open && 'rotate-90']"
+                />
+              </template>
+            </UButton>
+          </template>
+        </UAccordion>
+      </div>
 
+
+      <!-- <div class="w-full bg-blue-600 p-6 flex relative my-12">
+        <div class="flex-1">
+          <div
+            class="w-96 h-96 bg-white flex-1 p-6 flex flex-col justify-between"
+          >
+            <h2>Malumotingizni qoldiring</h2>
+            <div class="flex flex-col gap-6">
+              <input type="text" placeholder="Ism" class="border-2 w-full" />
+              <input type="text" placeholder="+998" class="border-2 w-full" />
+              <div class="flex gap-2">
+                <input type="checkbox" id="myChekbox" />
+                <label for="myChekbox">Maxfiylik siyosati</label>
+              </div>
+            </div>
+            <button class="w-full py-2 bg-black text-white">Yozilish</button>
+          </div>
         </div>
-    </section> -->
+        <div class="flex-1 h-full">
+          <h6 class="w-80 text-white mt-20">
+            Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
+            talaygina
+          </h6>
+          <img
+            src="../assets/faq/faq.png"
+            alt=""
+            width="450"
+            class="absolute bottom-0 right-10"
+          />
+        </div>
+      </div> -->
+    </div>
+  </section>
 </template>
 
-<style scoped>
-@media (max-width: 425px) {
-  p {
-    font-size: 12px;
-    font-weight: 200;
-  }
-  h1 {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 16px;
-    font-weight: 700;
-  }
-  section {
-    padding-top: 1rem;
-  }
-}
+<script setup lang="ts">
+import type { _textColor } from "#tailwind-config/theme";
 
-@media (min-width: 425px) {
-  p {
-    font-size: 16px;
-    font-weight: 200;
-  }
-  h1 {
-    font-size: 28px;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 22px;
-    font-weight: 700;
-  }
-  section {
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width: 640px) {
-  h1 {
-    font-size: 35px;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  section {
-    padding-top: 3rem;
-  }
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 35px;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 28px;
-    font-weight: 700;
-  }
-  section {
-    padding-top: 4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  h1 {
-    font-size: 42px;
-    font-weight: 700;
-  }
-}
-
-/* h2 {
-  font-size: 32px;
-  font-weight: 700;
-} */
-</style>
+const items = [
+  {
+    label: "Getting Started",
+    icon: "i-heroicons-information-circle",
+    defaultOpen: true,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
+  },
+  {
+    label: "Installation",
+    icon: "i-heroicons-arrow-down-tray",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
+  },
+  {
+    label: "Theming",
+    icon: "i-heroicons-eye-dropper",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
+  },
+];
+</script>

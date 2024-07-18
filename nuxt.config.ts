@@ -15,5 +15,5 @@ export default defineNuxtConfig({
   families:{
     Unbounded:'200..900',
   },
-}], "@nuxt/icon"]
+}], "@nuxt/icon", "@nuxt/ui"]
 })
