@@ -4,19 +4,19 @@
       <div class="home-left flex-1 flex flex-col justify-between">
         <div class="md:flex flex-col gap-4 pe-4 max-md:hidden">
           <h1>Dizenfeksiya xizmati</h1>
-          <p>
+          <p class="lg:text-2xl">
             Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
             olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
             qutilishni bilamiz
           </p>
         </div>
 
-        <Button class="flex w-max gap-3 items-center max-md:hidden">
+        <Button class="flex w-max gap-3 items-center max-md:hidden mt-6">
           Bog'lanish
           <Icon
+            class="text-2xl"
             name="material-symbols:arrow-outward"
             color="black"
-            class="text-2xl"
           />
         </Button>
       </div>
@@ -36,8 +36,7 @@
             Bog'lanish
             <Icon
               name="material-symbols:arrow-outward"
-              color="black"
-              class="text-2xl"
+              class="text-2xl max-md:text-white"
             />
           </Button>
         </div>
@@ -153,7 +152,10 @@
       <div class="grid max-sm:grid-cols-1 grid-cols-3 border-t-2">
         <h1>FAQ</h1>
 
-        <UAccordion :items="items" :ui="{ wrapper: 'flex flex-col  col-span-2' }">
+        <UAccordion
+          :items="items"
+          :ui="{ wrapper: 'flex flex-col  col-span-2' }"
+        >
           <template #default="{ item, index, open }">
             <UButton
               color="black"
@@ -174,37 +176,42 @@
         </UAccordion>
       </div>
 
-
-      <!-- <div class="w-full bg-blue-600 p-6 flex relative my-12">
-        <div class="flex-1">
+      <div
+        class="lg:h-[430px] grid max-lg:grid-cols-1 grid-cols-2 w-full bg-blue-600 p-3 md:p-5 relative my-12"
+      >
+        <div class="flex content-center">
           <div
-            class="w-96 h-96 bg-white flex-1 p-6 flex flex-col justify-between"
+            class="gap-6 bg-white w-full p-2 md:p-4 flex flex-col justify-between"
           >
             <h2>Malumotingizni qoldiring</h2>
             <div class="flex flex-col gap-6">
-              <input type="text" placeholder="Ism" class="border-2 w-full" />
-              <input type="text" placeholder="+998" class="border-2 w-full" />
+              <input
+                type="text"
+                placeholder="Ism"
+                class="border-2 w-full text-xs md:text-xl"
+              />
+              <input
+                type="text"
+                placeholder="+998"
+                class="border-2 w-full text-xs md:text-xl"
+              />
               <div class="flex gap-2">
-                <input type="checkbox" id="myChekbox" />
+                <input type="checkbox" id="myChekbox" class="w-8" />
                 <label for="myChekbox">Maxfiylik siyosati</label>
               </div>
             </div>
-            <button class="w-full py-2 bg-black text-white">Yozilish</button>
+            <button class="w-full py-2 bg-primary text-white">Yozilish</button>
           </div>
         </div>
         <div class="flex-1 h-full">
-          <h6 class="w-80 text-white mt-20">
-            Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-            talaygina
-          </h6>
           <img
             src="../assets/faq/faq.png"
             alt=""
             width="450"
-            class="absolute bottom-0 right-10"
+            class="absolute bottom-0 right-0 max-lg:hidden"
           />
         </div>
-      </div> -->
+      </div>
     </div>
   </section>
 </template>

@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
-  css: ['~/assets/css/main.css'],
-  
+  css: ["~/assets/css/main.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -11,9 +11,16 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [["@nuxtjs/google-fonts",{
-  families:{
-    Unbounded:'200..900',
-  },
-}], "@nuxt/icon", "@nuxt/ui"]
-})
+  modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Unbounded: "200..900",
+        },
+      },
+    ],
+    "@nuxt/icon",
+    "@nuxt/ui",
+  ],
+});
