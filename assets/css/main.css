@@ -19,8 +19,7 @@ input{
 }
 
 li:hover {
-  color: rgb(0, 0, 255);
-  color: rgba(0, 0, 0, 0.418);
+  color: blue;
 }
 
 ::-webkit-scrollbar {
@@ -29,7 +28,7 @@ li:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(41, 163, 238);
+  background: #3FA2F6;
 }
 
 input {

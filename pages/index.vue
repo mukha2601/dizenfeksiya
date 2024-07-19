@@ -53,36 +53,7 @@
     <div class="container flex flex-col gap-12">
       <h1 class="border-b-2">Biz haqimizda</h1>
       <div class="about-card grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <AboutCard>
-          <img src="../assets/icon/icon (1).png" alt="" width="70" />
-          <h3>Tezda xizmat ko'rsatish</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-            voluptas asperiores quia aut quam! Aspernatur doloremque at nemo.
-            Obcaecati tempora earum pariatur iure labore minus totam, eaque
-            esse? Quos, aut?
-          </p>
-        </AboutCard>
-        <AboutCard>
-          <img src="../assets/icon/icon (2).png" alt="" width="70" />
-          <h3>Yetuk mutaxasislarimiz</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-            voluptas asperiores quia aut quam! Aspernatur doloremque at nemo.
-            Obcaecati tempora earum pariatur iure labore minus totam, eaque
-            esse? Quos, aut?
-          </p>
-        </AboutCard>
-        <AboutCard>
-          <img src="../assets/icon/icon (3).png" alt="" width="70" />
-          <h3>Sizga maqul vaqtda</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-            voluptas asperiores quia aut quam! Aspernatur doloremque at nemo.
-            Obcaecati tempora earum pariatur iure labore minus totam, eaque
-            esse? Quos, aut?
-          </p>
-        </AboutCard>
+        <AboutCard v-for="item in aboutData" :icon='item.icon' :title="item.title" :description="item.description"/>
       </div>
 
       <div class="relative">
@@ -112,12 +83,12 @@
       <h1>Xizmatlar</h1>
       <p>Biz sizga samarali va kafolatli xizmat taqdim etamiz</p>
       <div class="flex flex-col mt-4 w-full justify-between gap-4">
+        <!-- <ServiceCard />
         <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
+        <ServiceCard /> -->
       </div>
 
-      <div class="service-type">
+      <section class="service-type">
         <h1>Xizmat turi</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           <ServiceTypeCard />
@@ -126,7 +97,7 @@
           <ServiceTypeCard />
           <ServiceTypeCard />
         </div>
-      </div>
+      </section>
       <div
         class="p-6 w-full grid md:grid-cols-2 md:gap-12 lg:gap-18 bg-blue-400 mt-12"
       >
@@ -217,7 +188,7 @@
 </template>
 
 <script setup lang="ts">
-import type { _textColor } from "#tailwind-config/theme";
+import { aboutData } from "../data";
 
 const items = [
   {
