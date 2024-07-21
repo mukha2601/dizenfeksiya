@@ -241,7 +241,7 @@
                 <label for="myChekbox">Maxfiylik siyosati</label>
               </div>
             </div>
-            <button class="w-full py-2 bg-primary text-white">Yozilish</button>
+            <button class="w-full py-2 bg-black text-white">Yozilish</button>
           </div>
         </div>
         <div class="flex-1 h-full">
