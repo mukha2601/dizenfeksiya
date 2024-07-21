@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    "@vueuse/motion/nuxt",
     [
       "@nuxtjs/google-fonts",
       {
@@ -20,7 +21,13 @@ export default defineNuxtConfig({
         },
       },
     ],
-    "@nuxt/icon",
-    "@nuxt/ui",
+    [
+      "@nuxt/ui",
+      {
+        ui: {
+          primary: 'green',
+        },
+      },
+    ],
   ],
 });

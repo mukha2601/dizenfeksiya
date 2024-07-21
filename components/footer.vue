@@ -6,6 +6,7 @@
         <div class="flex flex-col gap-4">
           <nuxt-link to="#">
             <FooterItem
+            
               ><p>
                 Toshkent shahri Yashnabod tumani Mo’ljal Sergeli-4 bekat
               </p></FooterItem

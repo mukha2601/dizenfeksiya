@@ -19,6 +19,9 @@ export default {
         "2xl": "6rem",
       },
     },
-  },
-  plugins: [],
-};
+    colors: {
+      current: 'blue',
+    },
+    plugins: [],
+  }
+}

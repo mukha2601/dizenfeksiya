@@ -3,21 +3,36 @@
     <div class="container grid md:grid-cols-2">
       <div class="home-left flex-1 flex flex-col justify-between">
         <div class="md:flex flex-col gap-4 pe-4 max-md:hidden">
-          <h1>Dizenfeksiya xizmati</h1>
-          <p class="lg:text-2xl">
+          <h1
+            v-motion
+            :initial="{ opacity: 0, x: -250 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :duration="800"
+          >
+            Dizenfeksiya xizmati
+          </h1>
+          <p
+            class="lg:text-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -250 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :duration="800"
+          >
             Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
             olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
             qutilishni bilamiz
           </p>
         </div>
 
-        <Button class="flex w-max gap-3 items-center max-md:hidden mt-6">
+        <Button
+          class="flex w-max gap-3 items-center max-md:hidden mt-6"
+          v-motion
+          :initial="{ opacity: 0, x: 250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
+        >
           Bog'lanish
-          <Icon
-            class="text-2xl"
-            name="material-symbols:arrow-outward"
-            color="black"
-          />
+          <Icon class="text-2xl" name="material-symbols:arrow-outward" />
         </Button>
       </div>
       <div
@@ -25,6 +40,8 @@
       >
         <div
           class="md:hidden h-full flex flex-col gap-4 justify-center max-md:absolute max-md:top-0 p-2 sm:p-4 z-10"
+          v-motion-pop-visible
+          :duration="800"
         >
           <h1 class="text-white">Dizenfeksiya xizmati</h1>
           <p class="text-white">
@@ -44,6 +61,8 @@
           src="../assets/home/home right img.png"
           alt="home-img"
           class="max-md:blur-[2px] object-cover"
+          v-motion-slide-visible-right
+          :duration="600"
         />
       </div>
     </div>
@@ -53,7 +72,18 @@
     <div class="container flex flex-col gap-12">
       <h1 class="border-b-2">Biz haqimizda</h1>
       <div class="about-card grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <AboutCard v-for="item in aboutData" :icon='item.icon' :title="item.title" :description="item.description"/>
+        <AboutCard
+          v-for="item in aboutData"
+          :key="item.id"
+          :icon="item.icon"
+          :title="item.title"
+          :description="item.description"
+          <div
+          v-motion
+          :initial="{ opacity: 0, x: -250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
+        />
       </div>
 
       <div class="relative">
@@ -61,9 +91,17 @@
           src="../assets/about/about img.png"
           alt=""
           class="object-cover object-center max-md:blur-sm"
+          v-motion
+          :initial="{ opacity: 0, x: -250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="700"
         />
         <div
           class="absolute md:w-2/3 lg:w-1/2 p-3 md:p-4 right-0 top-0 gap-4 flex flex-col justify-center h-full max-md:text-white"
+          v-motion
+          :initial="{ opacity: 0, x: 250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="900"
         >
           <h2>Klapa va zararli hashorot endi yo'q dep xisoblang !!!</h2>
           <p class="max-md:hidden">
@@ -83,19 +121,33 @@
       <h1>Xizmatlar</h1>
       <p>Biz sizga samarali va kafolatli xizmat taqdim etamiz</p>
       <div class="flex flex-col mt-4 w-full justify-between gap-4">
-        <!-- <ServiceCard />
-        <ServiceCard />
-        <ServiceCard /> -->
+        <ServiceCard
+          v-for="item in serviceData"
+          :key="item.id"
+          :icon="item.icon"
+          :title="item.title"
+          :description="item.description"
+          v-motion
+          :initial="{ opacity: 0, x: 250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
+        />
       </div>
 
       <section class="service-type">
-        <h1>Xizmat turi</h1>
+        <h1 class="my-8">Xizmat turi</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          <ServiceTypeCard />
-          <ServiceTypeCard />
-          <ServiceTypeCard />
-          <ServiceTypeCard />
-          <ServiceTypeCard />
+          <ServiceTypeCard
+            v-for="item in serviceTypeData"
+            :key="item.id"
+            :icon="item.icon"
+            :title="item.title"
+            :description="item.description"
+            v-motion
+            :initial="{ opacity: 0, x: 250 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :duration="800"
+          />
         </div>
       </section>
       <div
@@ -105,8 +157,18 @@
           class="max-md:hidden object-cover object-center"
           src="../assets/service/service.png"
           alt=""
+          v-motion
+          :initial="{ opacity: 0, x: -250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
         />
-        <div class="flex flex-col justify-around gap-6">
+        <div
+          class="flex flex-col justify-around gap-6"
+          v-motion
+          :initial="{ opacity: 0, x: 250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
+        >
           <img class="" src="../assets/service/shit.png" alt="" width="80" />
           <h2 class="max-lg:text-sm text-white">
             Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
@@ -124,17 +186,19 @@
         <h1>FAQ</h1>
 
         <UAccordion
-          :items="items"
+          :items="faqData"
           :ui="{ wrapper: 'flex flex-col  col-span-2' }"
         >
-          <template #default="{ item, index, open }">
+          <template #default="{ item, open }">
             <UButton
               color="black"
               variant="ghost"
               class="border-b text-gray-500"
               :ui="{ rounded: 'rounded-none', padding: { sm: 'py-8' } }"
             >
-              <h2>{{ item.label }}</h2>
+              <h3 class="truncate leading-8 text-lg md:text-xl">
+                {{ item.label }}
+              </h3>
               <template #trailing>
                 <UIcon
                   name="i-heroicons-chevron-right-20-solid"
@@ -150,7 +214,13 @@
       <div
         class="lg:h-[430px] grid max-lg:grid-cols-1 grid-cols-2 w-full bg-blue-600 p-3 md:p-5 relative my-12"
       >
-        <div class="flex content-center">
+        <div
+          class="flex content-center"
+          v-motion
+          :initial="{ opacity: 0, x: -250 }"
+          :visible="{ opacity: 1, x: 0 }"
+          :duration="800"
+        >
           <div
             class="gap-6 bg-white w-full p-2 md:p-4 flex flex-col justify-between"
           >
@@ -159,12 +229,12 @@
               <input
                 type="text"
                 placeholder="Ism"
-                class="border-2 w-full text-xs md:text-xl"
+                class="border-2 w-full text-xs md:text-lg"
               />
               <input
                 type="text"
                 placeholder="+998"
-                class="border-2 w-full text-xs md:text-xl"
+                class="border-2 w-full text-xs md:text-lg"
               />
               <div class="flex gap-2">
                 <input type="checkbox" id="myChekbox" class="w-8" />
@@ -180,6 +250,10 @@
             alt=""
             width="450"
             class="absolute bottom-0 right-0 max-lg:hidden"
+            v-motion
+            :initial="{ opacity: 0, y: 250 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :duration="800"
           />
         </div>
       </div>
@@ -188,27 +262,5 @@
 </template>
 
 <script setup lang="ts">
-import { aboutData } from "../data";
-
-const items = [
-  {
-    label: "Getting Started",
-    icon: "i-heroicons-information-circle",
-    defaultOpen: true,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
-  },
-  {
-    label: "Installation",
-    icon: "i-heroicons-arrow-down-tray",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
-  },
-  {
-    label: "Theming",
-    icon: "i-heroicons-eye-dropper",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
-  },
-];
+import { aboutData, serviceData, serviceTypeData, faqData } from "../data";
 </script>

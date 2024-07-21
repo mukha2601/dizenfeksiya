@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.container{
+  overflow: hidden;
+}
+
 body {
   font-family: "Unbounded";
   background-color: white;
