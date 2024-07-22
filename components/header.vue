@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const activeSection = ref("home");
 const sections = ref([]);
