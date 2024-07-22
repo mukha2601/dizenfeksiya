@@ -1,13 +1,12 @@
 <template>
   <div class="relative">
     <aside
-      class="w-full h-screen border-2 border-red-500 flex justify-end absolute z-50"
+      class="w-full h-screen flex justify-end absolute z-50 bg-transparent"
+      v-if="isOpen"
     >
-      <div
-        class="w-96 h-full border-2 border-red-300 flex flex-col p-6 gap-8 bg-white"
-      >
+      <div class="w-96 h-full border-2 flex flex-col p-6 gap-8 bg-white">
         <div class="flex justify-end">
-          <button>
+          <button @click="isOpen = false">
             <Icon
               class="text-4xl hover:text-red-600"
               name="ant-design:close-square-outlined"
@@ -18,26 +17,25 @@
         <AsideBtn>Biz haqimizda</AsideBtn>
         <AsideBtn>Xizmatlar</AsideBtn>
         <AsideBtn>FAQ</AsideBtn>
-        <USelect v-model="selected" :options="language" />
+        <div class="p-2 max-md:px-4 px-8">
+          <USelect v-model="selected" :options="language" />
+        </div>
       </div>
     </aside>
-    <Header />
+
+    <Header @openMenu="openMenu" />
     <slot />
     <Footer />
   </div>
 </template>
 
 <script setup>
-const language = [
-  {
-    id: 1,
-    label: "UZBEK",
-  },
-  {
-    id: 2,
-    label: "RUSSIAN",
-  },
-];
+const language = ["UZBEK", "RUSSIAN"];
 
-const selected = ref(language[1]);
+const selected = ref(language[0]);
+const isOpen = ref(false);
+const openMenu = () => (isOpen.value = true);
+// const bgDisable = computed(() => {
+//   window;
+// });
 </script>

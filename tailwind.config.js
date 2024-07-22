@@ -19,7 +19,11 @@ export default {
         "2xl": "6rem",
       },
     },
-
+    extend: {
+      colors: {
+        transparent: '#00000046',
+      },
+    },
     plugins: [],
   },
 };

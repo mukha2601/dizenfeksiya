@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section id="home" class="home">
     <div class="container grid md:grid-cols-2">
       <div class="home-left flex-1 flex flex-col justify-between">
         <div class="md:flex flex-col gap-4 pe-4 max-md:hidden">
@@ -68,7 +68,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="container flex flex-col gap-12">
       <h1 class="border-b-2">Biz haqimizda</h1>
       <div class="about-card grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -116,7 +116,7 @@
     </div>
   </section>
 
-  <section class="service">
+  <section id="service" class="service">
     <div class="container flex flex-col gap-6">
       <h1>Xizmatlar</h1>
       <p>Biz sizga samarali va kafolatli xizmat taqdim etamiz</p>
@@ -180,7 +180,7 @@
     </div>
   </section>
 
-  <section class="faq">
+  <section id="faq" class="faq">
     <div class="container">
       <div class="grid max-sm:grid-cols-1 grid-cols-3 border-t-2">
         <h1>FAQ</h1>
@@ -261,6 +261,8 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { aboutData, serviceData, serviceTypeData, faqData } from "../data";
+
 </script>
+
