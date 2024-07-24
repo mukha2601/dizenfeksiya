@@ -221,28 +221,37 @@
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
         >
-          <div
+          <form
+            id="myForm"
+            @submit.prevent="submitForm"
             class="gap-6 bg-white w-full p-2 md:p-4 flex flex-col justify-between"
           >
             <h2>Malumotingizni qoldiring</h2>
             <div class="flex flex-col gap-6">
               <input
+                v-model="formData.name"
+                required
                 type="text"
                 placeholder="Ism"
                 class="border-2 w-full text-xs md:text-lg"
               />
               <input
-                type="text"
+                v-model="formData.phone"
+                required
+                type="number"
                 placeholder="+998"
                 class="border-2 w-full text-xs md:text-lg"
               />
               <div class="flex gap-2">
-                <input type="checkbox" id="myChekbox" class="w-8" />
+                <input type="checkbox" id="myChekbox" class="w-8" required />
                 <label for="myChekbox">Maxfiylik siyosati</label>
               </div>
             </div>
-            <button class="w-full py-2 bg-black text-white">Yozilish</button>
-          </div>
+            <button type="submit" class="w-full py-2 bg-black text-white">
+              <span v-if="loading">Loading...</span>
+              <span v-else>Submit</span>
+            </button>
+          </form>
         </div>
         <div class="flex-1 h-full">
           <img
@@ -262,7 +271,31 @@
 </template>
 
 <script setup>
+import axios from "axios";
 import { aboutData, serviceData, serviceTypeData, faqData } from "../data";
-
+const formData = ref({
+  name: "",
+  phone: "",
+  token: "7286785147:AAHMzIsD7ZjnQFIqdP-Gf4BSrciqcAz4UyQ",
+  chat_id: "6507400166",
+});
+const loading = ref(false);
+const submitForm = () => {
+  loading.value = true;
+  const messageContent = `Ismi: ${formData.value.name} \nPhone: ${formData.value.phone.toString()}`;
+  axios({
+    url: `https://api.telegram.org/bot${formData.value.token}/sendMessage`,
+    method: "post",
+    data: {
+      chat_id: formData.value.chat_id,
+      text: messageContent,
+    },
+  })
+    .then(() => {
+      document.getElementById("myForm").reset();
+      alert("Habar yuborildi");
+    })
+    .catch((errorMessages) => alert("Yuborilmadi: ", errorMessages))
+    .finally(() => (loading.value = false));
+};
 </script>
-

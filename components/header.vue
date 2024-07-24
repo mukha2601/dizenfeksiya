@@ -17,12 +17,11 @@
         </li>
       </ul>
       <div class="flex">
-        <!-- <select>
-                    <option value="ru">Русский</option>
-                    <option value="uz">O'zbekcha</option>
-                </select> -->
         <Button class="py-1 text-sm max-lg:hidden">Kirish</Button>
-        <button class="border-2 flex content-center p-1 border-black lg:hidden" @click="$emit('openMenu')">
+        <button
+          class="border-2 flex content-center p-1 border-black lg:hidden"
+          @click="$emit('openMenu')"
+        >
           <Icon name="fe:bar" color="black" class="text-2xl" />
         </button>
       </div>
@@ -31,7 +30,6 @@
 </template>
 
 <script setup>
-
 const activeSection = ref("home");
 const sections = ref([]);
 
