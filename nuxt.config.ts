@@ -25,9 +25,31 @@ export default defineNuxtConfig({
       "@nuxt/ui",
       {
         ui: {
-          primary: 'green',
+          primary: "green",
         },
       },
     ],
+    "@nuxtjs/i18n",
   ],
+
+  i18n: {
+    lazy: true,
+    langDir: "locales",
+    strategy: "no_prefix",
+    locales: [
+      {
+        code: "uz-UZ",
+        iso: "uz-UZ",
+        name: "Uzbek",
+        file: "uz-UZ.json",
+      },
+      {
+        code: "ru-RU",
+        iso: "ru-RU",
+        name: "Russian",
+        file: "ru-RU.json",
+      },
+    ],
+    defaultLocale: "uz-UZ",
+  },
 });

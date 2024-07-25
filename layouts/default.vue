@@ -27,9 +27,7 @@
         <AsideBtn :class="activeSection === 'faq'"
           ><a href="#faq"><p>FAQ</p></a></AsideBtn
         >
-        <div class="p-2 max-md:px-4 px-8">
-          <USelect v-model="selected" :options="language" />
-        </div>
+
       </div>
     </aside>
 
@@ -71,7 +69,7 @@ const onScroll = () => {
     const rect = section.getBoundingClientRect();
     if (rect.top <= 0 && rect.bottom >= 0) {
       currentSection = section.id;
-      closeModal()
+      closeModal();
     }
   });
 

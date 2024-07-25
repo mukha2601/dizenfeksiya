@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.3.1",
     "@vueuse/motion": "^2.2.3",
     "axios": "^1.7.2",
     "nuxt": "^3.12.3",

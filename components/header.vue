@@ -17,6 +17,19 @@
         </li>
       </ul>
       <div class="flex">
+        <select
+          v-model="language"
+          class="rounded-none bg-white border-2 border-black overflow-hidden outline-none"
+        >
+          <option
+            v-for="item in locales"
+            :key="typeof item === 'object' ? item.code : item"
+            :value="typeof item === 'object' ? item.code : item"
+          >
+            {{ typeof item === "object" ? item.name : item }}
+          </option>
+        </select>
+
         <Button class="py-1 text-sm max-lg:hidden">Kirish</Button>
         <button
           class="border-2 flex content-center p-1 border-black lg:hidden"
@@ -32,6 +45,14 @@
 <script setup>
 const activeSection = ref("home");
 const sections = ref([]);
+const { locales, locale, setLocale } = useI18n();
+
+const language = computed({
+  get: () => locale.value,
+  set: (value) => {
+    setLocale(value);
+  },
+});
 
 const onScroll = () => {
   let currentSection = "home";

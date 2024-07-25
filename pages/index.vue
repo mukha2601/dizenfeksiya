@@ -23,6 +23,7 @@
             qutilishni bilamiz
           </p>
         </div>
+        <p>{{ $t("header.title") }}</p>
 
         <Button
           class="flex w-max gap-3 items-center max-md:hidden mt-6"
@@ -273,6 +274,7 @@
 <script setup>
 import axios from "axios";
 import { aboutData, serviceData, serviceTypeData, faqData } from "../data";
+const { locales, locale } = useI18n();
 const formData = ref({
   name: "",
   phone: "",
@@ -282,7 +284,9 @@ const formData = ref({
 const loading = ref(false);
 const submitForm = () => {
   loading.value = true;
-  const messageContent = `Ismi: ${formData.value.name} \nPhone: ${formData.value.phone.toString()}`;
+  const messageContent = `Ismi: ${
+    formData.value.name
+  } \nPhone: ${formData.value.phone.toString()}`;
   axios({
     url: `https://api.telegram.org/bot${formData.value.token}/sendMessage`,
     method: "post",
