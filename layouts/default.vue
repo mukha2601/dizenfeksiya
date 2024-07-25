@@ -38,8 +38,6 @@
 </template>
 
 <script setup>
-const language = ["UZBEK", "RUSSIAN"];
-const selected = ref(language[0]);
 
 const isOpen = ref(false);
 

@@ -1,6 +1,45 @@
 {
+  "button": "Bog'lanish",
   "header": {
-    "title": "hello",
-    "subtitle": "world"
+    "title": "Dizenfeksiya xizmati",
+    "subtitle": "Biz Toshkentda 10 yildan beri professional dezinfeksiya ishlarini olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday qutilishni bilamiz"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "card": {
+      "title1": "Tezda Xizmat Koʻrsatish",
+      "subtitle1": "ARIZALAR KUNIGA 24 SOAT QABUL QILINADI. AGAR MUAMMO ShOShILINCh BOʻLSA, BIZ DARHOL KETIShIMIZ MUMKIN. ShU BILAN BIRGA, SIFAT MUKAMMAL BOʻLIB QOLADI.",
+      "title2": "Yetuk Mutahasislarimiz",
+      "subtitle2": "BIZNING XODIMLARIMIZ HAMMA NARSAGA GʻAMXOʻRLIK QILADI: HISOB-KITOBLAR, XONANI TAYYoRLASh, QAYTA IShLASh, YaKUNIY TOZALASh, VENTILYaTSIYa VA NAZORAT TEKShIRUVI.",
+      "title3": "Sizga Maqul Vaqtda",
+      "subtitle3": "SIZ OʻZINGIZ UChUN MAQUL VA QULAY VAQTNI TANLANG VA BIZGA MUROJAT QILING. SIZGA KAFOLATLANGAN VA SAMARALI NATIJANI OLIB BORAMIZ"
+    },
+    "banner": {
+      "title": "Klapa va zararli hashorot endi yo'q dep xisoblang !!!",
+      "subtitle": "Bizning ko'p yillardan beri o'z faoliyatini olib kelayotgan kampaniyamiz. Mijozlarimiz bizdan mamnun"
+    }
+  },
+  "service": {
+    "title": "Xizmatlar",
+    "subtitle": "Biz sizga samarali va kafolatli xizmat taqdim etamiz",
+    "serviceCard": {
+      "title1": "Dezinfeksiya - zararli mikro organizmlarni yoʻq qilish",
+      "subtitle1": "Har qanday dezinfeksiyaning asosiy vazifasi infeksiyalar va kasalliklarga olib kelishi mumkin boʻlgan xavfli mikroorganizmlarni yoʻq qilishdir. Dezinfeksiya choralari boʻsh joyni mogʻor, virus, chiriyotgan va bakteriyalardan tozalaydi. Jarayon atrof-muhitni patogen organizmlardan tozalaydi.Agar oʻzingizni yomon his qilsangiz, charchoq yoki sababsiz zaiflashsangiz kerak.",
+      "title2": "Dezinseksiya - hasharotlarni yoʻq qilish",
+      "subtitle2": "Koʻp odamlar birinchi navbatda 'dezinfestatsiya' soʻzini istalmagan qoʻshnilaridan - choyshablar, hamamböcekler, chumolilar va boshqa hasharotlardan xalos boʻlish yolini qidirganda duch kelishadi. Ularning oʻzlari yoʻqimsiz va ular ham ma'lum infektsiya tashuvchilari. Dezinseksiya - bu hasharotlarni: chivinlar, chivinlar, choyshablar, tarakanlar, kuya, shomil, qobiq qoʻngʻizlari, yogʻoch bitlari va boshqa sudralib yuruvchi va uchuvchi jonzotlarni yoʻq qilish.",
+      "title3": "Deratizatsiya - kemiruvchilarni yoʻq qilish",
+      "subtitle3": "Toshkentda deratizatsiya kemiruvchilarni yoʻq qilishga qaratilgan kompleks chora-tadbirlarning butun majmuasidir. Ma'lumki, kemiruvchilar juda qattiq jonzotlar boʻlib, ular turli xil xavfli ta'sirlarga dosh beradilar. Shuning uchun ularni yoʻq qilish uchun bir qator usullardan foydalanish kerak. Deratizatsiya Toshkent shahrida kemiruvchilar paydo boʻlgan joylarda: koʻp qavatli uylar, omborlar, doʻkonlar, umumiy ovqatlanish korxonalari amalga oshiriladi."
+    }
+  },
+  "serviceType": {
+    "title": "Xizmat turi",
+    "card": {
+      "title": "Klapalar",
+      "subtitle": "Ular to‘shakda, yumshoq mebelda, to‘qimachilikda, yeshik romlari va deraza romlari ostida yashaydilar. Ular odamlar va issiq qonli hayvonlarning qoni bilan oziqlanadi. Allergiya va og‘ir psixologik noqulaylikni qo‘zg‘ating..."
+    },
+    "banner": "Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar talaygina"
+  },
+  "faq":{
+    
   }
 }

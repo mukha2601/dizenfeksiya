@@ -9,7 +9,7 @@
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
           >
-            Dizenfeksiya xizmati
+            {{ $t("header.title") }}
           </h1>
           <p
             class="lg:text-2xl"
@@ -18,12 +18,9 @@
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
           >
-            Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
-            olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
-            qutilishni bilamiz
+            {{ $t("header.subtitle") }}
           </p>
         </div>
-        <p>{{ $t("header.title") }}</p>
 
         <Button
           class="flex w-max gap-3 items-center max-md:hidden mt-6"
@@ -44,11 +41,9 @@
           v-motion-pop-visible
           :duration="800"
         >
-          <h1 class="text-white">Dizenfeksiya xizmati</h1>
+          <h1 class="text-white">{{ $t("header.title") }}</h1>
           <p class="text-white">
-            Biz Toshkentda 10 yildan beri professional dizenfeksiya ishlarini
-            olib boramiz, shuning uchun birinchi marta zararkunandalardan qanday
-            qutilishni bilamiz
+            {{ $t("header.subtitle") }}
           </p>
           <Button class="flex w-max gap-3 items-center border-white text-white">
             Bog'lanish
@@ -71,9 +66,9 @@
 
   <section id="about" class="about">
     <div class="container flex flex-col gap-12">
-      <h1 class="border-b-2">Biz haqimizda</h1>
+      <h1 class="border-b-2">{{ $t("about.title") }}</h1>
       <div class="about-card grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <AboutCard
+        <!-- <AboutCard
           v-for="item in aboutData"
           :key="item.id"
           :icon="item.icon"
@@ -84,7 +79,9 @@
           :initial="{ opacity: 0, x: -250 }"
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
-        />
+        /> -->
+
+        <AboutCard />
       </div>
 
       <div class="relative">
@@ -104,13 +101,12 @@
           :visible="{ opacity: 1, x: 0 }"
           :duration="900"
         >
-          <h2>Klapa va zararli hashorot endi yo'q dep xisoblang !!!</h2>
+          <h2>{{ $t("about.banner.title") }}</h2>
           <p class="max-md:hidden">
-            Bizning ko'p yillardan beri o'z faoliyatini olib kelayotgan
-            kampaniyamiz. Mijozlarimiz bizdan mamnun
+            {{ $t("about.banner.subtitle") }}
           </p>
           <div>
-            <Button class="max-md:border-white">Bog'lanish</Button>
+            <Button class="max-md:border-white">{{ $t("button") }}</Button>
           </div>
         </div>
       </div>
@@ -119,10 +115,10 @@
 
   <section id="service" class="service">
     <div class="container flex flex-col gap-6">
-      <h1>Xizmatlar</h1>
-      <p>Biz sizga samarali va kafolatli xizmat taqdim etamiz</p>
+      <h1>{{ $t("service.title") }}</h1>
+      <p>{{ $t("service.subtitle") }}</p>
       <div class="flex flex-col mt-4 w-full justify-between gap-4">
-        <ServiceCard
+        <!-- <ServiceCard
           v-for="item in serviceData"
           :key="item.id"
           :icon="item.icon"
@@ -132,18 +128,34 @@
           :initial="{ opacity: 0, x: 250 }"
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
+        /> -->
+
+        <ServiceCard
+          v-motion
+          :initial="{ opacity: 0, x: 250 }"
+          :visible="{
+            opacity: 1,
+            x: 0,
+          }"
+          :duration="800"
         />
       </div>
 
       <section class="service-type">
-        <h1 class="my-8">Xizmat turi</h1>
+        <h1 class="my-8">{{ $t('serviceType.title') }}</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          <ServiceTypeCard
+          <!-- <ServiceTypeCard
             v-for="item in serviceTypeData"
             :key="item.id"
             :icon="item.icon"
             :title="item.title"
             :description="item.description"
+            v-motion
+            :initial="{ opacity: 0, x: 250 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :duration="800"
+          /> -->
+          <ServiceTypeCard
             v-motion
             :initial="{ opacity: 0, x: 250 }"
             :visible="{ opacity: 1, x: 0 }"
@@ -172,10 +184,9 @@
         >
           <img class="" src="../assets/service/shit.png" alt="" width="80" />
           <h2 class="max-lg:text-sm text-white">
-            Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-            talaygina
+            {{ $t("serviceType.banner") }}
           </h2>
-          <Button class="w-max text-white border-white">Bog’lanish</Button>
+          <Button class="w-max text-white border-white">{{ $t('button') }}</Button>
         </div>
       </div>
     </div>
@@ -274,7 +285,6 @@
 <script setup>
 import axios from "axios";
 import { aboutData, serviceData, serviceTypeData, faqData } from "../data";
-const { locales, locale } = useI18n();
 const formData = ref({
   name: "",
   phone: "",

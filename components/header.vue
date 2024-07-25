@@ -16,7 +16,7 @@
           <a href="#faq"><p>FAQ</p></a>
         </li>
       </ul>
-      <div class="flex">
+      <div class="flex gap-3 md:gap-5">
         <select
           v-model="language"
           class="rounded-none bg-white border-2 border-black overflow-hidden outline-none"

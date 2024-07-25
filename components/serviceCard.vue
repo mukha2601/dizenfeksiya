@@ -6,16 +6,16 @@
       >
         <img
           class="shrink-0 w-32 h-32 md:w-48 md:h-48"
-          :src="icon"
+          :src="icon4"
           alt="Modern building architecture"
         />
       </div>
       <div class="p-3 sm:p-6 md:p-8">
         <h3 class="uppercase tracking-wide text-sm font-semibold">
-          {{ title }}
+          {{ $t('service.serviceCard.title1') }}
         </h3>
         <p class="mt-2 text-slate-500">
-          {{ description }}
+          {{ $t('service.serviceCard.subtitle1') }}
         </p>
       </div>
     </div>
@@ -23,9 +23,12 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  icon: string;
-  title: string;
-  description: string;
-}>();
+import icon4 from "../assets/service/service-icon(1).png";
+import icon5 from "../assets/service/service-icon(2).jpg";
+import icon6 from "../assets/service/service-icon(3).jpg";
+// defineProps<{
+//   icon: string;
+//   title: string;
+//   description: string;
+// }>();
 </script>
