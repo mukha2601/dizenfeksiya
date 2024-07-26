@@ -7,8 +7,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
-.container{
+.container {
   overflow: hidden;
 }
 
@@ -18,7 +21,7 @@ body {
   color: black;
 }
 
-input{
+input {
   background-color: white;
 }
 
@@ -32,14 +35,13 @@ li:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3FA2F6;
+  background: #3fa2f6;
 }
 
 input {
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
-
 
 @media (max-width: 425px) {
   p {
@@ -55,7 +57,7 @@ input {
     font-weight: 700;
   }
   section {
-    padding:  1rem 0;
+    padding: 1rem 0;
   }
 }
 
@@ -73,7 +75,7 @@ input {
     font-weight: 700;
   }
   section {
-    padding:  2rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -87,7 +89,7 @@ input {
     font-weight: 700;
   }
   section {
-    padding:  3rem 0;
+    padding: 3rem 0;
   }
 }
 
@@ -101,7 +103,7 @@ input {
     font-weight: 700;
   }
   section {
-    padding:  4rem 0;
+    padding: 4rem 0;
   }
 }
 

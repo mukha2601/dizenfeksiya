@@ -1,25 +1,31 @@
 <template>
-  <div class="header border-b-2 py-4 w-full sticky top-0 z-10 bg-white">
+  <div class="header border-b-2 py-4 w-full sticky top-0 z-50 bg-white">
     <div class="container flex justify-between items-center">
       <Logo />
       <ul class="flex gap-8 max-lg:hidden">
         <li :class="activeSection === 'home'">
-          <a href="#"><p>{{ $t('header.main') }}</p></a>
+          <a href="#"
+            ><p>{{ $t("header.main") }}</p></a
+          >
         </li>
         <li :class="activeSection === 'about'">
-          <a href="#about"><p>{{ $t('header.about') }}</p></a>
+          <a href="#about"
+            ><p>{{ $t("header.about") }}</p></a
+          >
         </li>
         <li :class="activeSection === 'service'">
-          <a href="#service"><p>{{ $t('header.services') }}</p></a>
+          <a href="#service"
+            ><p>{{ $t("header.services") }}</p></a
+          >
         </li>
         <li :class="activeSection === 'FAQ'">
           <a href="#faq"><p>FAQ</p></a>
         </li>
       </ul>
-      <div class="flex gap-3 md:gap-5">
+      <div class="flex gap-3 md:gap-5 items-center">
         <select
           v-model="language"
-          class="rounded-none bg-white border-2 border-black overflow-hidden outline-none"
+          class="rounded-none bg-white border-2 border-black overflow-hidden outline-none py-1"
         >
           <option
             v-for="item in locales"
@@ -30,7 +36,7 @@
           </option>
         </select>
 
-        <Button class="py-1 text-sm max-lg:hidden">{{ $t('button') }}</Button>
+        <Button class="py-1 text-sm max-lg:hidden">{{ $t("button") }}</Button>
         <button
           class="border-2 flex content-center p-1 border-black lg:hidden"
           @click="$emit('openMenu')"

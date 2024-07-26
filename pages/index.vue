@@ -29,7 +29,7 @@
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
         >
-          {{ $t('button') }}
+          {{ $t("button") }}
           <Icon class="text-2xl" name="material-symbols:arrow-outward" />
         </Button>
       </div>
@@ -45,8 +45,8 @@
           <p class="text-white">
             {{ $t("home.subtitle") }}
           </p>
-          <Button class="flex w-max gap-3 items-center border-white text-white">
-            Bog'lanish
+          <Button class="flex w-max gap-3 items-center text-white">
+            {{ $t("button") }}
             <Icon
               name="material-symbols:arrow-outward"
               class="text-2xl max-md:text-white"
@@ -130,16 +130,9 @@
           :duration="800"
         /> -->
 
-        <ServiceCard
-          v-motion
-          :initial="{ opacity: 0, x: 250 }"
-          :visible="{
-            opacity: 1,
-            x: 0,
-          }"
-          :duration="800"
-        />
+        <ServiceCard />
       </div>
+
 
       <section class="service-type">
         <h1 class="my-8">{{ $t("serviceType.title") }}</h1>
@@ -155,12 +148,7 @@
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
           /> -->
-          <ServiceTypeCard
-            v-motion
-            :initial="{ opacity: 0, x: 250 }"
-            :visible="{ opacity: 1, x: 0 }"
-            :duration="800"
-          />
+          <ServiceTypeCard />
         </div>
       </section>
       <div
@@ -257,7 +245,7 @@
                 class="border-2 w-full text-xs md:text-lg"
               />
               <div class="flex gap-2">
-                <input type="checkbox" id="myChekbox" class="w-8" required />
+                <input type="checkbox" id="myChekbox" class="w-8" />
                 <label for="myChekbox">{{ $t("form.chekbox") }}</label>
               </div>
             </div>
