@@ -11,7 +11,7 @@
               </p>
             </FooterItem>
           </nuxt-link>
-          <a href="+998906549659">
+          <a :href="`tel:${phoneNumber}`">
             <FooterItem><p>+998 94 099 3434</p></FooterItem>
           </a>
         </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script setup>
+const phoneNumber = '+998906549659'
 const activeSection = ref("home");
 const sections = ref([]);
 const onScroll = () => {
