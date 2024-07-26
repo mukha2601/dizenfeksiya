@@ -8,7 +8,7 @@
             <FooterItem
             
               ><p>
-                Toshkent shahri Yashnabod tumani Mo’ljal Sergeli-4 bekat
+                {{ $t('footer') }}
               </p></FooterItem
             >
           </nuxt-link>

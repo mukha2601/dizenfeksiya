@@ -16,18 +16,23 @@
           </button>
         </div>
         <AsideBtn :class="activeSection === 'home'"
-          ><a href="#home"><p>Asosiy</p></a></AsideBtn
+          ><a href="#home"
+            ><p>{{ $t("header.main") }}</p></a
+          ></AsideBtn
         >
         <AsideBtn :class="activeSection === 'about'"
-          ><a href="#about"><p>Biz haqimizda</p></a></AsideBtn
+          ><a href="#about"
+            ><p>{{ $t("header.about") }}</p></a
+          ></AsideBtn
         >
         <AsideBtn :class="activeSection === 'service'"
-          ><a href="#service"><p>Xizmatlar</p></a></AsideBtn
+          ><a href="#service"
+            ><p>{{ $t("header.services") }}</p></a
+          ></AsideBtn
         >
         <AsideBtn :class="activeSection === 'faq'"
           ><a href="#faq"><p>FAQ</p></a></AsideBtn
         >
-
       </div>
     </aside>
 
@@ -38,7 +43,6 @@
 </template>
 
 <script setup>
-
 const isOpen = ref(false);
 
 const openMenu = () => {

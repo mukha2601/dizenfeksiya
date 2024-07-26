@@ -40,13 +40,13 @@ export default defineNuxtConfig({
       {
         code: "uz-UZ",
         iso: "uz-UZ",
-        name: "Uzbek",
+        name: "UZ",
         file: "uz-UZ.json",
       },
       {
         code: "ru-RU",
         iso: "ru-RU",
-        name: "Russian",
+        name: "RU",
         file: "ru-RU.json",
       },
     ],

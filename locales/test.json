@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "Zararkunandalarni yo‘q qilish qanday amalga oshiriladi?",
+    "content": "Maxsus asbob-uskunalar yordamida insektitsidlar ayerozolli tumanga aylanadi va devor qog‘ozi, devorlar va taxta plitalari orasidagi yeng kichik bo‘shliqlarga, ko‘zga ko‘rinmas hasharotlar uchun potentsial 'yashirish joylari' ga kiradi."
+  },
+  {
+    "id": 2,
+    "label": "Siz foydalanadigan dorilar xavflimi?",
+    "content": "Preparatlar odamlar, uy hayvonlari va o‘simliklar uchun xavfli yemas. Ammo davolanishdan keyin xonani 40 daqiqa davomida ventilyatsiya qilish kerak."
+  },
+  {
+    "id": 3,
+    "label": "Menga uyimni davolanishga tayyorlashning qandaydir usuli kerakmi?",
+    "content": "Asosan, idish-tovoq va shaxsiy gigiyena vositalarini izolyatsiya qilishingiz kerak. Davolash paytida uy hayvonlari ham izolyatsiya qilinishi kerak. Mebel yoki maishiy texnikani ko‘chirishga hojat yo‘q."
+  }
+]

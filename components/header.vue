@@ -4,13 +4,13 @@
       <Logo />
       <ul class="flex gap-8 max-lg:hidden">
         <li :class="activeSection === 'home'">
-          <a href="#"><p>Asosiy</p></a>
+          <a href="#"><p>{{ $t('header.main') }}</p></a>
         </li>
         <li :class="activeSection === 'about'">
-          <a href="#about"><p>Biz haqimizda</p></a>
+          <a href="#about"><p>{{ $t('header.about') }}</p></a>
         </li>
         <li :class="activeSection === 'service'">
-          <a href="#service"><p>Xizmatlar</p></a>
+          <a href="#service"><p>{{ $t('header.services') }}</p></a>
         </li>
         <li :class="activeSection === 'FAQ'">
           <a href="#faq"><p>FAQ</p></a>
@@ -30,7 +30,7 @@
           </option>
         </select>
 
-        <Button class="py-1 text-sm max-lg:hidden">Kirish</Button>
+        <Button class="py-1 text-sm max-lg:hidden">{{ $t('button') }}</Button>
         <button
           class="border-2 flex content-center p-1 border-black lg:hidden"
           @click="$emit('openMenu')"

@@ -9,7 +9,7 @@
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
           >
-            {{ $t("header.title") }}
+            {{ $t("home.title") }}
           </h1>
           <p
             class="lg:text-2xl"
@@ -18,7 +18,7 @@
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
           >
-            {{ $t("header.subtitle") }}
+            {{ $t("home.subtitle") }}
           </p>
         </div>
 
@@ -29,7 +29,7 @@
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
         >
-          Bog'lanish
+          {{ $t('button') }}
           <Icon class="text-2xl" name="material-symbols:arrow-outward" />
         </Button>
       </div>
@@ -41,9 +41,9 @@
           v-motion-pop-visible
           :duration="800"
         >
-          <h1 class="text-white">{{ $t("header.title") }}</h1>
+          <h1 class="text-white">{{ $t("home.title") }}</h1>
           <p class="text-white">
-            {{ $t("header.subtitle") }}
+            {{ $t("home.subtitle") }}
           </p>
           <Button class="flex w-max gap-3 items-center border-white text-white">
             Bog'lanish
@@ -142,7 +142,7 @@
       </div>
 
       <section class="service-type">
-        <h1 class="my-8">{{ $t('serviceType.title') }}</h1>
+        <h1 class="my-8">{{ $t("serviceType.title") }}</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           <!-- <ServiceTypeCard
             v-for="item in serviceTypeData"
@@ -186,7 +186,9 @@
           <h2 class="max-lg:text-sm text-white">
             {{ $t("serviceType.banner") }}
           </h2>
-          <Button class="w-max text-white border-white">{{ $t('button') }}</Button>
+          <Button class="w-max text-white border-white">{{
+            $t("button")
+          }}</Button>
         </div>
       </div>
     </div>
@@ -238,13 +240,13 @@
             @submit.prevent="submitForm"
             class="gap-6 bg-white w-full p-2 md:p-4 flex flex-col justify-between"
           >
-            <h2>Malumotingizni qoldiring</h2>
+            <h2>{{ $t("form.title") }}</h2>
             <div class="flex flex-col gap-6">
               <input
                 v-model="formData.name"
                 required
                 type="text"
-                placeholder="Ism"
+                :placeholder="$t('form.placeholder')"
                 class="border-2 w-full text-xs md:text-lg"
               />
               <input
@@ -256,12 +258,12 @@
               />
               <div class="flex gap-2">
                 <input type="checkbox" id="myChekbox" class="w-8" required />
-                <label for="myChekbox">Maxfiylik siyosati</label>
+                <label for="myChekbox">{{ $t("form.chekbox") }}</label>
               </div>
             </div>
             <button type="submit" class="w-full py-2 bg-black text-white">
-              <span v-if="loading">Loading...</span>
-              <span v-else>Submit</span>
+              <span v-if="loading">{{ $t("form.loadingBtn") }}</span>
+              <span v-else>{{ $t("form.button") }}</span>
             </button>
           </form>
         </div>
@@ -291,6 +293,7 @@ const formData = ref({
   token: "7286785147:AAHMzIsD7ZjnQFIqdP-Gf4BSrciqcAz4UyQ",
   chat_id: "6507400166",
 });
+
 const loading = ref(false);
 const submitForm = () => {
   loading.value = true;
