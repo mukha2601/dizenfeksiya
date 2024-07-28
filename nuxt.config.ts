@@ -12,9 +12,7 @@ export default defineNuxtConfig({
           content: "Bu sayt zararkunandalarni yo'qotish uchun xizmat qiladi",
         },
       ],
-      link: [
-        { rel: "icon", type: "image/x-icon", href: "/logo.ico" },
-      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/logo.ico" }],
     },
   },
   compatibilityDate: "2024-04-03",
@@ -42,7 +40,7 @@ export default defineNuxtConfig({
       "@nuxt/ui",
       {
         ui: {
-          primary: "green",
+          primary: "blue",
         },
       },
     ],
@@ -58,15 +56,29 @@ export default defineNuxtConfig({
         code: "uz-UZ",
         iso: "uz-UZ",
         name: "UZ",
-        file: "uz-UZ.json",
+        file: "uz.js",
       },
       {
         code: "ru-RU",
         iso: "ru-RU",
         name: "RU",
-        file: "ru-RU.json",
+        file: "ru.js",
       },
     ],
     defaultLocale: "uz-UZ",
   },
+
+  // i18n: {
+  //   vueI18n: './i18n.config.ts'
+  // }
+
+  // i18n: {
+  //   locales: [
+  //     { code: "uz", name: "UZ", iso: "uz-UZ", file: "uz.js" },
+  //     { code: "ru", name: "RU", iso: "ru-RU", file: "ru.js" },
+  //   ],
+  //   lazy: true,
+  //   langDir: "locales",
+  //   defaultLocale: "uz",
+  // },
 });

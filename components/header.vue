@@ -23,17 +23,25 @@
         </li>
       </ul>
       <div class="flex gap-3 md:gap-5 items-center">
-        <select
+        <!-- <select
           v-model="language"
           class="rounded-none bg-white border-2 border-black overflow-hidden outline-none py-1"
         >
           <option
-            v-for="item in locales"
+            v-for="item in data.locales"
             :key="typeof item === 'object' ? item.code : item"
             :value="typeof item === 'object' ? item.code : item"
           >
             {{ typeof item === "object" ? item.name : item }}
           </option>
+        </select> -->
+
+        <select
+          v-model="language"
+          class="rounded-none bg-white border-2 border-black overflow-hidden outline-none py-1"
+        >
+          <option key="uz-UZ" value="uz-UZ">UZ</option>
+          <option key="ru-RU" value="ru-RU">RU</option>
         </select>
 
         <Button class="py-1 text-sm max-lg:hidden">{{ $t("button") }}</Button>
@@ -51,8 +59,7 @@
 <script setup>
 const activeSection = ref("home");
 const sections = ref([]);
-const { locales, locale, setLocale } = useI18n();
-
+const { locale, setLocale, messages } = useI18n();
 const language = computed({
   get: () => locale.value,
   set: (value) => {

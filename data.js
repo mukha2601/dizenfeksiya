@@ -2,27 +2,48 @@ import icon1 from "../assets/about/about-icon(1).png";
 import icon2 from "../assets/about/about-icon(2).png";
 import icon3 from "../assets/about/about-icon(3).png";
 
-const aboutData = [
+const aboutDataUZ = [
   {
-    id: 1,
+    // id: 1,
     icon: icon1,
     title: "Tezda Xizmat Koʻrsatish",
-    description:
+    subtitle:
       "ARIZALAR KUNIGA 24 SOAT QABUL QILINADI. AGAR MUAMMO ShOShILINCh BOʻLSA, BIZ DARHOL KETIShIMIZ MUMKIN. ShU BILAN BIRGA, SIFAT MUKAMMAL BOʻLIB QOLADI.",
   },
   {
-    id: 2,
+    // id: 2,
     icon: icon2,
     title: "Yetuk Mutahasislarimiz",
-    description:
+    subtitle:
       "BIZNING XODIMLARIMIZ HAMMA NARSAGA GʻAMXOʻRLIK QILADI: HISOB-KITOBLAR, XONANI TAYYoRLASh, QAYTA IShLASh, YaKUNIY TOZALASh, VENTILYaTSIYa VA NAZORAT TEKShIRUVI.",
   },
   {
-    id: 3,
+    // id: 3,
     icon: icon3,
     title: "Sizga Maqul Vaqtda",
-    description:
+    subtitle:
       "SIZ OʻZINGIZ UChUN MAQUL VA QULAY VAQTNI TANLANG VA BIZGA MUROJAT QILING. SIZGA KAFOLATLANGAN VA SAMARALI NATIJANI OLIB BORAMIZ",
+  },
+];
+
+const aboutDataRU = [
+  {
+    icon: icon1,
+    title: "Быстрое Обслуживание",
+    subtitle:
+      "ЗАЯВКИ ПРИНИМАЮТСЯ КРУГЛОСУТОЧНО. В СЛУЧАЕ ЭКСТРЕННОЙ СИТУАЦИИ МЫ МОЖЕМ ВЫЕХАТЬ НЕМЕДЛЕННО. ПРИ ЭТОМ КАЧЕСТВО ОСТАНЕТСЯ НА ВЫСОКОМ УРОВНЕ.",
+  },
+  {
+    icon: icon2,
+    title: "Квалифицированные Специалисты",
+    subtitle:
+      "НАШИ СОТРУДНИКИ ПОЗАБОТЯТСЯ О ВСЁМ: РАСЧЁТАХ, ПОДГОТОВКЕ ПОМЕЩЕНИЯ, ПОВТОРНОЙ ОБРАБОТКЕ, ОКОНЧАТЕЛЬНОЙ УБОРКЕ, ВЕНТИЛЯЦИИ И КОНТРОЛЬНОЙ ПРОВЕРКЕ.",
+  },
+  {
+    icon: icon3,
+    title: "В Удобное Для Вас Время",
+    subtitle:
+      "ВЫБИРАЙТЕ УДОБНОЕ И ПОДХОДЯЩЕЕ ДЛЯ ВАС ВРЕМЯ И ОБРАЩАЙТЕСЬ К НАМ. МЫ ГАРАНТИРУЕМ ВАМ ЭФФЕКТИВНЫЙ И РЕЗУЛЬТАТИВНЫЙ СЕРВИС.",
   },
 ];
 
@@ -97,7 +118,7 @@ const serviceTypeData = [
   },
 ];
 
-const faqData = [
+const faqDataUZ = [
   {
     id: 12,
     label: "Zararkunandalarni yo‘q qilish qanday amalga oshiriladi?",
@@ -118,4 +139,32 @@ const faqData = [
   },
 ];
 
-export { aboutData, serviceData, serviceTypeData, faqData };
+const faqDataRU = [
+  {
+    id: 12,
+    label: "Как осуществляется уничтожение вредителей?",
+    content:
+      "С помощью специального оборудования инсектициды превращаются в аэрозольный туман, который проникает в мельчайшие щели между обоями, стенами и досками пола, потенциальные 'укрытия' для невидимых насекомых.",
+  },
+  {
+    id: 13,
+    label: "Опасны ли используемые вами препараты?",
+    content:
+      "Препараты не опасны для людей, домашних животных и растений. Однако после обработки помещение необходимо проветрить в течение 40 минут.",
+  },
+  {
+    id: 14,
+    label: "Нужно ли как-то подготовить мой дом к обработке?",
+    content:
+      "В основном нужно изолировать посуду и средства личной гигиены. Во время обработки также следует изолировать домашних животных. Перемещать мебель или бытовую технику не требуется.",
+  },
+];
+
+export {
+  aboutDataUZ,
+  aboutDataRU,
+  serviceData,
+  serviceTypeData,
+  faqDataUZ,
+  faqDataRU,
+};
