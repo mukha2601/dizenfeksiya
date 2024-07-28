@@ -115,8 +115,8 @@
       <h1>{{ $t("service.title") }}</h1>
       <p>{{ $t("service.subtitle") }}</p>
       <div class="flex flex-col mt-4 w-full justify-between gap-4">
-        <!-- <ServiceCard
-          v-for="item in serviceData"
+        <ServiceCard
+          v-for="item in languageSwitch(serviceDataUZ, serviceDataRU)"
           :key="item.id"
           :icon="item.icon"
           :title="item.title"
@@ -125,16 +125,14 @@
           :initial="{ opacity: 0, x: 250 }"
           :visible="{ opacity: 1, x: 0 }"
           :duration="800"
-        /> -->
-
-        <ServiceCard />
+        />
       </div>
 
       <section class="service-type">
         <h1 class="my-8">{{ $t("serviceType.title") }}</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          <!-- <ServiceTypeCard
-            v-for="item in serviceTypeData"
+          <ServiceTypeCard
+            v-for="item in languageSwitch(serviceTypeDataUZ, serviceTypeDataRU)"
             :key="item.id"
             :icon="item.icon"
             :title="item.title"
@@ -143,8 +141,7 @@
             :initial="{ opacity: 0, x: 250 }"
             :visible="{ opacity: 1, x: 0 }"
             :duration="800"
-          /> -->
-          <ServiceTypeCard />
+          />
         </div>
       </section>
       <div
@@ -240,8 +237,18 @@
 
 <script setup>
 const { locale } = useI18n();
-import { faqDataUZ, faqDataRU, aboutDataUZ, aboutDataRU } from "../data.js";
+import {
+  faqDataUZ,
+  faqDataRU,
+  aboutDataUZ,
+  aboutDataRU,
+  serviceDataUZ,
+  serviceDataRU,
+  serviceTypeDataRU,
+  serviceTypeDataUZ,
+} from "../data.js";
 
+//---------til o'zgarganda ishlaydigan funksiya-------
 const languageSwitch = (uz, ru) => {
   if (locale.value == "uz-UZ") {
     return uz;

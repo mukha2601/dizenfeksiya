@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-const phoneNumber = '+998906549659'
+const phoneNumber = "+998906549659";
 const activeSection = ref("home");
 const sections = ref([]);
 const onScroll = () => {

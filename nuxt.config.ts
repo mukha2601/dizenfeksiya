@@ -67,18 +67,4 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "uz-UZ",
   },
-
-  // i18n: {
-  //   vueI18n: './i18n.config.ts'
-  // }
-
-  // i18n: {
-  //   locales: [
-  //     { code: "uz", name: "UZ", iso: "uz-UZ", file: "uz.js" },
-  //     { code: "ru", name: "RU", iso: "ru-RU", file: "ru.js" },
-  //   ],
-  //   lazy: true,
-  //   langDir: "locales",
-  //   defaultLocale: "uz",
-  // },
 });

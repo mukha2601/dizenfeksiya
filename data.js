@@ -51,7 +51,7 @@ import icon4 from "../assets/service/service-icon(1).png";
 import icon5 from "../assets/service/service-icon(2).jpg";
 import icon6 from "../assets/service/service-icon(3).jpg";
 
-const serviceData = [
+const serviceDataUZ = [
   {
     id: 4,
     icon: icon4,
@@ -75,12 +75,36 @@ const serviceData = [
   },
 ];
 
+const serviceDataRU = [
+  {
+    id: 4,
+    icon: icon4,
+    title: "Дезинфекция - уничтожение вредных микроорганизмов",
+    description:
+      "Основная задача любой дезинфекции - уничтожение опасных микроорганизмов, которые могут привести к инфекциям и заболеваниям. Меры дезинфекции очищают пространство от плесени, вирусов, грибка и бактерий. Процесс очищает окружающую среду от патогенных организмов. Если вы чувствуете себя плохо, у вас усталость или беспричинная слабость, это может быть необходимо.",
+  },
+  {
+    id: 5,
+    icon: icon5,
+    title: "Дезинсекция - уничтожение насекомых",
+    description:
+      "Многие люди впервые сталкиваются с понятием 'дезинсекция', когда ищут способ избавиться от нежелательных соседей - клопов, тараканов, муравьев и других насекомых. Они не только неприятны сами по себе, но и могут быть переносчиками различных инфекций. Дезинсекция - это уничтожение насекомых: комаров, мух, клопов, тараканов, моли, клещей, короедов, древесных жуков и других ползающих и летающих существ.",
+  },
+  {
+    id: 6,
+    icon: icon6,
+    title: "Дератизация - уничтожение грызунов",
+    description:
+      "В Ташкенте дератизация представляет собой комплекс мероприятий, направленных на уничтожение грызунов. Известно, что грызуны - очень выносливые существа, способные противостоять различным опасным воздействиям. Поэтому для их уничтожения необходимо использовать ряд методов. Дератизация проводится в местах появления грызунов в Ташкенте: многоквартирные дома, склады, магазины, предприятия общественного питания.",
+  },
+];
+
 import icon7 from "../assets/service/parasites (1).jpg";
 import icon8 from "../assets/service/parasites (2).jpg";
 import icon9 from "../assets/service/parasites (3).jpg";
 import icon10 from "../assets/service/parasites (4).jpg";
 import icon11 from "../assets/service/parasites (5).jpg";
-const serviceTypeData = [
+const serviceTypeDataUZ = [
   {
     id: 7,
     icon: icon7,
@@ -115,6 +139,44 @@ const serviceTypeData = [
     title: "Burgalar",
     description:
       "Ular uy hayvonlari tanasiga kirib, qo‘shnilardan ko‘chib ketishadi. Ular yumshoq mebellar, ko‘rpa-to‘shaklar, gilamlar, yumshoq o‘yinchoqlar, taglik tagida va deraza va yeshik romlarida yashaydilar. Ular odamlar va hayvonlarning qoni bilan oziqlanadi. Ular kasalliklarga olib keladi ...",
+  },
+];
+
+const serviceTypeDataRU = [
+  {
+    id: 7,
+    icon: icon7,
+    title: "Клопы",
+    description:
+      "Они живут в постелях, мягкой мебели, текстиле, под дверными и оконными рамами. Питаются кровью людей и теплокровных животных. Вызывают аллергию и сильный психологический дискомфорт...",
+  },
+  {
+    id: 8,
+    icon: icon8,
+    title: "Тараканы",
+    description:
+      "Они переносят патогены. Живут в трещинах, под плинтусами, за мебелью, под ванной, под шкафами и т.д. Питаются продуктами питания, бытовыми отходами, кожаными изделиями и бумагой.",
+  },
+  {
+    id: 9,
+    icon: icon9,
+    title: "Скорпионы",
+    description:
+      "Теплолюбивые существа, питающиеся насекомыми и паукообразными. Могут обитать в складах и домах, но чаще всего встречаются в деревянных строениях...",
+  },
+  {
+    id: 10,
+    icon: icon10,
+    title: "Грызуны",
+    description:
+      "Самые распространенные - крысы и мыши. Они переносят патогены, передвигаются по всем поверхностям, создают проходы в стенах и потолках, снижают надежность конструкций. Питаются продуктами питания и бытовыми отходами...",
+  },
+  {
+    id: 11,
+    icon: icon11,
+    title: "Блохи",
+    description:
+      "Они проникают в тела домашних животных и мигрируют от соседей. Живут в мягкой мебели, постелях, коврах, мягких игрушках, под плинтусами и в оконных и дверных рамах. Питаются кровью людей и животных. Могут вызвать заболевания...",
   },
 ];
 
@@ -163,8 +225,10 @@ const faqDataRU = [
 export {
   aboutDataUZ,
   aboutDataRU,
-  serviceData,
-  serviceTypeData,
+  serviceDataUZ,
+  serviceDataRU,
+  serviceTypeDataRU,
+  serviceTypeDataUZ,
   faqDataUZ,
   faqDataRU,
 };

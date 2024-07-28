@@ -9,10 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import icon1 from "../assets/about/about-icon(1).png";
-import icon2 from "../assets/about/about-icon(2).png";
-import icon3 from "../assets/about/about-icon(3).png";
-
 defineProps<{
   icon: string;
   title: string;
