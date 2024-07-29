@@ -34,8 +34,8 @@
         class="border-2 w-full text-xs md:text-lg"
       />
       <div class="flex gap-2">
-        <input type="checkbox" id="myChekbox" class="w-8" />
-        <label for="myChekbox">{{ $t("form.chekbox") }}</label>
+        <input type="checkbox" id="myChekbox" class="w-6 sm:w-8" />
+        <label for="myChekbox" class="max-[425px]:text-[10px]">{{ $t("form.chekbox") }}</label>
       </div>
     </div>
     <button
