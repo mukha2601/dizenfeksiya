@@ -39,6 +39,7 @@
     <Header @openMenu="openMenu" />
     <slot />
     <Footer />
+    <UNotifications />
   </div>
 </template>
 

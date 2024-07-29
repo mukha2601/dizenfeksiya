@@ -1,4 +1,17 @@
 <template>
+  <!-- <div class="absolute w-full">
+    <UNotification
+      :show="notification"
+      icon="i-heroicons-check-badge"
+      color="blue"
+      :id="6"
+      title="Notification"
+      description="This is a notification."
+      :timeout="6000"
+      :close="closeNotification"
+    />
+  </div> -->
+
   <form
     id="myForm"
     @submit.prevent="submitForm"
@@ -25,7 +38,12 @@
         <label for="myChekbox">{{ $t("form.chekbox") }}</label>
       </div>
     </div>
-    <button type="submit" class="w-full py-2 bg-black text-white">
+    <button
+      type="submit"
+      class="w-full py-2 bg-black text-white"
+      label="Show toast"
+
+    >
       <span v-if="loading">{{ $t("form.loadingBtn") }}</span>
       <span v-else>{{ $t("form.button") }}</span>
     </button>
@@ -34,14 +52,15 @@
 
 <script setup>
 import axios from "axios";
+const toast = useToast();
 const formData = ref({
   name: "",
   phone: "",
   token: "7286785147:AAHMzIsD7ZjnQFIqdP-Gf4BSrciqcAz4UyQ",
   chat_id: "6507400166",
 });
-
 const loading = ref(false);
+
 const submitForm = () => {
   loading.value = true;
   const messageContent = `Ismi: ${
@@ -57,9 +76,13 @@ const submitForm = () => {
   })
     .then(() => {
       document.getElementById("myForm").reset();
-      alert("Habar yuborildi");
+      formData.value.name = "";
+      formData.value.phone = "";
+      toast.add({
+        title: "Xabaringiz yuborildi",
+      });
     })
-    .catch((errorMessages) => alert("Yuborilmadi: ", errorMessages))
+    .catch((errorMessages) => console.log("Yuborilmadi: ", errorMessages))
     .finally(() => (loading.value = false));
 };
 </script>
